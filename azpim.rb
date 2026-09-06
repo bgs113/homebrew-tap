@@ -5,20 +5,20 @@
 class Azpim < Formula
   desc "CLI for managing Azure Privileged Identity Management (PIM) role assignments"
   homepage "https://github.com/bgs113/azpim"
-  version "1.0.1"
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bgs113/azpim/releases/download/v1.0.1/azpim-v1.0.1-darwin-amd64.zip"
-      sha256 "4f611cf86c8a545e5a55704f244ee6795501420fe7cf08bab6defcb4cf71a4b5"
+      url "https://github.com/bgs113/azpim/releases/download/v1.0.2/azpim-v1.0.2-darwin-amd64.zip"
+      sha256 "e9b8ac1ebe87967e5092b33949fbf8bf87d37777e45b50b9e9c37431cd313c2e"
 
       define_method(:install) do
         bin.install "azpim"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bgs113/azpim/releases/download/v1.0.1/azpim-v1.0.1-darwin-arm64.zip"
-      sha256 "67ee871d614b3577df6d8681a230fff45524346a0d4461111fef2c3f0f21a9d3"
+      url "https://github.com/bgs113/azpim/releases/download/v1.0.2/azpim-v1.0.2-darwin-arm64.zip"
+      sha256 "b81c1b8ebc78b3397050c1b2b51b3198b2d413360be94fa4685207fcdbf9f820"
 
       define_method(:install) do
         bin.install "azpim"
@@ -28,15 +28,15 @@ class Azpim < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bgs113/azpim/releases/download/v1.0.1/azpim-v1.0.1-linux-amd64.zip"
-      sha256 "bc8dceb9edce82121143907715302966d745ee5915133a0831c03d9dc49c34f4"
+      url "https://github.com/bgs113/azpim/releases/download/v1.0.2/azpim-v1.0.2-linux-amd64.zip"
+      sha256 "d43016fb8067fa2c09c7cb14f7faa1fca7da79075e177b950e349b89609b4d39"
       define_method(:install) do
         bin.install "azpim"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bgs113/azpim/releases/download/v1.0.1/azpim-v1.0.1-linux-arm64.zip"
-      sha256 "f08fda4af67cf89db587e1e25767e74eadd515e17567b95e2789b33b6b0cb56e"
+      url "https://github.com/bgs113/azpim/releases/download/v1.0.2/azpim-v1.0.2-linux-arm64.zip"
+      sha256 "13e831c3641dca3a803789ee59ce509f0bbd7bfde66320d242bc527af9bd4c01"
       define_method(:install) do
         bin.install "azpim"
       end
