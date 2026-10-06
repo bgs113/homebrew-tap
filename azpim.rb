@@ -5,12 +5,12 @@
 class Azpim < Formula
   desc "CLI for managing Azure Privileged Identity Management (PIM) role assignments"
   homepage "https://github.com/bgs113/azpim"
-  version "1.2.2"
+  version "1.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bgs113/azpim/releases/download/v1.2.2/azpim-v1.2.2-darwin-amd64.zip"
-      sha256 "0e674bdc4cb5948640c707a1dcc31e6f10a383321b4be6c7398646b19a3aadec"
+      url "https://github.com/bgs113/azpim/releases/download/v1.2.3/azpim-v1.2.3-darwin-amd64.zip"
+      sha256 "9266777366dd061c04e96830d3872fcf36fb4fcd239b93815c5b0db3a51a3b60"
 
       define_method(:install) do
         bin.install "azpim"
@@ -18,8 +18,8 @@ class Azpim < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bgs113/azpim/releases/download/v1.2.2/azpim-v1.2.2-darwin-arm64.zip"
-      sha256 "109956e268e487ccf87806217ad0b4e52f6cb53cad7d4db3489ba81eaf632a4f"
+      url "https://github.com/bgs113/azpim/releases/download/v1.2.3/azpim-v1.2.3-darwin-arm64.zip"
+      sha256 "78a89572dc44d821c28411e152ae7acbbcb6c58cfe35ed61a598cf0736185229"
 
       define_method(:install) do
         bin.install "azpim"
@@ -30,16 +30,16 @@ class Azpim < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bgs113/azpim/releases/download/v1.2.2/azpim-v1.2.2-linux-amd64.zip"
-      sha256 "330299f59aa098152284ae5947b56c3b0d2be9125505dd9fd51339cd0ff4081d"
+      url "https://github.com/bgs113/azpim/releases/download/v1.2.3/azpim-v1.2.3-linux-amd64.zip"
+      sha256 "aeab71990cfaa3b631ca4dfbc97920441c2d4317455d79cbff1505ee83e979c7"
       define_method(:install) do
         bin.install "azpim"
         generate_completions_from_executable(bin/"azpim", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bgs113/azpim/releases/download/v1.2.2/azpim-v1.2.2-linux-arm64.zip"
-      sha256 "4f7cea66923cd376e5ffc2ed608289caa4f4ddeaea4cdc1441c972dc04b51654"
+      url "https://github.com/bgs113/azpim/releases/download/v1.2.3/azpim-v1.2.3-linux-arm64.zip"
+      sha256 "7f31689cc25a63b550b062d496db6a78b5fb8ad820d1cf29cd42a8de9ea62eb8"
       define_method(:install) do
         bin.install "azpim"
         generate_completions_from_executable(bin/"azpim", "completion")
